@@ -7,6 +7,13 @@ def index(request):
         'global/base.html',
     )
 
+# test
+def teste(request):
+    return render(
+        request,
+        'global/teste.html',
+    )
+
 
 
 # REQUESTES - RESPONSE - RENDER

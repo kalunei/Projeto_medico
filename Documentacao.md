@@ -57,3 +57,10 @@ ortopedia
 cardiologia
 neurologia 
 clinico geral
+
+
+
+
+# Criar uma view qye vai rederizar um arquivo chamado seunome.html.
+# No seunome.html coloque um h1 com o seu nome.
+# Em seguida, crie uma url e chame esse aquivo seunome.html.
