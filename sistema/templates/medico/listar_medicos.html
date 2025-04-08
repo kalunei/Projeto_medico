@@ -1,0 +1,54 @@
+
+
+
+{% comment %} 
+<h1>Listagem de pacientes</h1>
+{% block conteudo %}
+
+    {% for i in pacientes %}
+        {{i.nome }} <br>  Utilizando interpolação (Acessando um obj e um atributo) 
+
+    {% endfor %}
+
+{% endblock conteudo %} {% endcomment %}
+
+
+{% block conteudo %}
+    <div class="responsive-table">
+        <table class="medicos-tabel">
+            <caption class="table-caption">
+                Listagem de medicos
+            </caption>
+
+            <thead>
+                <tr class="table-row" class="tabel-row-header">
+                    <th class="table-header">ID</th>
+                    <th class="table-header">Nome</th>
+                    <th class="table-header">Sobrenome</th>
+                    <th class="table-header">Crm</th>
+                    <th class="table-header">Especialidade</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {% for i in medicos %}
+                    <tr class="table-row">
+                        <td class="table-cel"> {{ i.id }}</td>
+                        <td class="table-cel"> {{ i.nome }}</td>
+                        <td class="table-cel"> {{ i.sobrenome }}</td>
+                        <td class="table-cel"> {{ i.crm }}</td>
+                        <td class="table-cel"> {{ i.especialidade_id }}</td>
+                    </tr> 
+                    
+
+
+
+                {% endfor %}
+            </tbody>
+
+
+
+        </table>
+    </div>
+{% endblock conteudo %}
+

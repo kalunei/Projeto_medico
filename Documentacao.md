@@ -64,3 +64,11 @@ clinico geral
 # Criar uma view qye vai rederizar um arquivo chamado seunome.html.
 # No seunome.html coloque um h1 com o seu nome.
 # Em seguida, crie uma url e chame esse aquivo seunome.html.
+
+
+
+## Aula 08/04
+1. injeção de contexto -> Utilizando o dicionário ``context`` para acessar todos os objetos.
+- class Paciente (Modelo - Tabela)
+- acessar todos os objetos(instâncias) que foram criadas a partir da class Paciente.
+- Renderizar todos esses contatos no arquivo listar.html

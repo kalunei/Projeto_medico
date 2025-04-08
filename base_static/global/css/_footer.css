@@ -1,0 +1,53 @@
+/* Estilo geral do footer */
+.footer {
+    background-color: rgb(255, 255, 255); /* Azul escuro */
+    color: #ffffff; /* Texto branco */
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Container centralizado */
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Texto do rodapé */
+.footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0.8; /* Deixa o texto mais suave */
+}
+
+/* Lista de contatos */
+.foodter-contato {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.foodter-contato li {
+    margin: 5px 0;
+}
+
+/* Links do rodapé */
+.foodter-contato a {
+    text-decoration: none;
+    color: #1abc9c; /* Verde claro */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.foodter-contato a:hover {
+    color: #16a085; /* Verde mais escuro no hover */
+}
+
+/* Copyright */
+.footer-copy {
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.6;
+}

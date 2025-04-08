@@ -32,15 +32,29 @@ class Medico(models.Model):
     mensagem = models.TextField(blank=True)  
     ativo = models.BooleanField(default=True)
     imagem = models.ImageField(upload_to='img/%Y/%m/', blank=True)
-    especialidades = models.ManyToManyField("Especialidade", related_name="medicos") 
-    
+    # especialidades = models.ManyToManyField("Especialidade", related_name="medicos") 
+    especialidade_id = models.ForeignKey(Especialidade, on_delete=models.CASCADE, default="1")
 
 
     def __str__(self):
         return f'{self.nome} {self.sobrenome}'
     
-    def especialidades_display(self):
-        # Retorna o nome da primeira especialidade associada, se houver
-        especialidade = self.especialidades.first()
-        return especialidade.nome if especialidade else "Sem especialidade"
+    # def especialidades_display(self):
+    #     # Retorna o nome da primeira especialidade associada, se houver
+    #     especialidade = self.especialidades.first()
+    #     return especialidade.nome if especialidade else "Sem especialidade"
 
+
+class Consulta(models.Model):
+    paciente_id = models.ForeignKey(Paciente, on_delete=models.CASCADE, null=True)
+    #paciente_id = models.ForeignKey("de onde vem a chave")
+    medico_id = models.ForeignKey(Medico, on_delete=models.CASCADE, null=True)
+    horario = models.DateTimeField(default=tz.now)
+    obeservacao = models.TextField(blank=True)
+    status = models.CharField(default='A',max_length=1, choices=(('A','Agendada'),('C','Cancelada'),('M','Confirmada'),('R','Realizada')))
+    #A- agendada C- cancelada M-confirmada R-realizada
+    
+    def __str__(self):
+        
+        return f'Consulta {self.get_status_display()} com sucesso!'
+    
