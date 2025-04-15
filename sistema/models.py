@@ -33,7 +33,9 @@ class Medico(models.Model):
     ativo = models.BooleanField(default=True)
     imagem = models.ImageField(upload_to='img/%Y/%m/', blank=True)
     # especialidades = models.ManyToManyField("Especialidade", related_name="medicos") 
-    especialidade_id = models.ForeignKey(Especialidade, on_delete=models.CASCADE, default="1")
+    especialidade_id = models.ForeignKey(Especialidade, on_delete=models.CASCADE, default="1", verbose_name='Especialidade')
+
+    
 
 
     def __str__(self):

@@ -12,4 +12,7 @@ class PacienteForm(forms.ModelForm):
 class MedicoForm(forms.ModelForm):
     class Meta: #class Meta server pra cfg o form
         model = Medico #define qual o model que o form representa
-        fields = ['nome', 'sobrenome', 'crm', 'mensagem', 'ativo',]
+        fields = ['nome', 'sobrenome', 'crm', 'mensagem', 'ativo', 'especialidade_id',]
+        labels = {
+            'especialidade_id': "Setor",
+        }
