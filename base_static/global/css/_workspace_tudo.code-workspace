@@ -1,13 +1,16 @@
 {
 	"folders": [
 		{
+			"name": "_sistema_clinica-main",
 			"path": "../../.."
 		},
 		{
-			"path": "../../../../_Noah-Anderson-Kenue_sitema_projeto"
+			"name": "_front_consultame-main",
+			"path": "../../../../../_front_consultame-main"
 		},
 		{
-			"path": "../../../../../_front_consultame-main"
+			"name": "_Noah-Anderson-Kenue_sitema_projeto",
+			"path": "../../../../_Noah-Anderson-Kenue_sitema_projeto"
 		}
 	],
 	"settings": {}
