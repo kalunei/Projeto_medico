@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect   
+from django.shortcuts import get_object_or_404, render, redirect   
 from sistema.forms import PacienteForm
 from sistema.models import Paciente
+
 
 
 def listarPacientes(request):
@@ -36,4 +37,22 @@ def cadastroPacientes(request):
         request,
         'paciente/cadastro.html',
         {'form': form},
+    )
+
+
+def perfilPaciente(request, paciente_id):
+    paciente_unico = get_object_or_404(
+        Paciente, pk=paciente_id
+        )
+    
+    titulo = f'{paciente_unico.nome}{paciente_unico.sobrenome}'
+    context = {
+        'paciente_unico':paciente_unico,
+        'titulo':titulo,
+    }
+
+    return render(
+        request,
+        'paciente/perfil.html',
+        context
     )

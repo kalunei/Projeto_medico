@@ -13,6 +13,7 @@
 9- python -m pip install Pillow
 10- python manage.py makemigrations
 11- python manage.py migrate 
+12- c
 
 # PRINCIPAIS ARQUIVOS/PASTAS DO PROJECT
 1. settings.py -> é o arquivo de configuração do projeto.
@@ -72,3 +73,8 @@ clinico geral
 - class Paciente (Modelo - Tabela)
 - acessar todos os objetos(instâncias) que foram criadas a partir da class Paciente.
 - Renderizar todos esses contatos no arquivo listar.html
+
+
+## 1. Incluir alguns comando no settings.py para tratar as imagens
+## 2. Ir no urls.py e incluir uma rota dinâmica para as imagens
+## 3. Ir no listar.hrml e incluir o campo imagem; 
