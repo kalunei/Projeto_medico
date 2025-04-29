@@ -1,16 +1,38 @@
-<h1>Cadastrar Médico</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Bootstrap CSS -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
-{% comment %} Formulário que envia os dados via POST e aceita envio de
-arquivos {% endcomment %}
-<form  method="POST" enctype="multipart/form-data" >
-    {% csrf_token %}
+<head>
+    {% include "global/partials/_head.html" %}
+</head>
+<link rel="stylesheet" href="{% static 'global/css/base.css' %}">
 
-    {% comment %} Exibição dos campos para enviar o formulário {% endcomment %}
+<body>
+    <header>
+        {% include "global/partials/_header.html" %}
+    </header>
+    <h1>Cadastrar Médico</h1>
+
+    {% comment %} Formulário que envia os dados via POST e aceita envio de
+    arquivos {% endcomment %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% comment %} Exibição dos campos para enviar o formulário {% endcomment %}
 
 
 
-    {% comment %} Exibir info do forms como parágrafos {% endcomment %}
-    {{form.as_p}}
-  
-    <button type="submit">Salvar</button>
-</form>
+        {% comment %} Exibir info do forms como parágrafos {% endcomment %}
+        {{form.as_p}}
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <footer>
+        {% include "global/partials/_footer.html" %}
+    </footer>
+</body>
+
+</html>

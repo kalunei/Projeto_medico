@@ -3,7 +3,8 @@
 
 <header class="header">
     <div class="container header-container">
-      <a href="#" class="logo"><img src="assets/logo.svg" alt="Logo da consulta.me"></a>
+      <a href="#" class="logo">{% load static %}
+        <img src="{% static 'global/assets/logo.svg' %}" alt="Logo"></a>
       <div class="navbar-form">
         <a href="#" class="btn-link">Login</a>
       </div>
